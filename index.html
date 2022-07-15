@@ -1,0 +1,112 @@
+<script>
+    console.log("hello world"); //inline comment
+    /*
+    multi line comment yay
+    :)
+    :p
+    */
+   var myName = "Bianca" ;//used through the whole program
+   myName = 8 ;
+   let ourName = "Us"; //within the scope of it being used
+   const pi = 3.14;
+   var a;
+   var b = 2;
+   console.log(a);
+   a = 7;
+   b = a;
+   console.log(a);
+
+//----------------------------------------------------------
+var a = 5;
+var b = 10;
+var c = "I am a "; 
+
+//
+a = a + 1;
+b = b + 5;
+c = c + "String!";
+console.log(a,b,c);
+
+var myString = `"Bianca was here':p'"`;
+console.log(myString);
+var newStr = "I am Bianca. "+"I am learning Javascript. ";
+newStr += "I am gonna learn it in no time."
+len = newStr.length;
+console.log(newStr, len);
+
+//---------------------------------------------------------------
+var Stringy = "Jello World";
+Stringy = "Hello World";   // Strings are immutable, you have to change the whole thing
+// you cannot change just one letter for example. So Stringy[0]="H" wouldn't have worked
+
+//------------------------------------------------------------------------------
+// Arrays
+var array = ["Bianca", 19];
+// Nested/multidim array
+var newArray = [['Bianca',20],["äaaaa",1]];
+// Push/pop
+var arrayy = [1,2,3];
+arrayy.push(4);
+console.log(arrayy);
+arrayy.pop();
+console.log(arrayy);
+//Shift/unshift
+arrayy.shift();
+console.log(arrayy);
+arrayy.unshift('cat');
+console.log(arrayy);
+
+//----------------------------------------------------------------------------
+//functions
+function myFunction() {
+    console.log("Yooo, i made a function in JS!!");
+}
+myFunction();
+
+function ourFunctionArgs(a,b) {
+    console.log(a+b);
+}
+ourFunctionArgs(10,"cat");
+
+
+//Scope global local
+var myGlobal = 10;
+
+function fun1() {
+    oopsGlobal = 5; //no "var" keyword, that means it becomes global even if it is within the function
+}
+function fun2() {
+    var sum;
+    sum = myGlobal + oopsGlobal;
+    return sum;
+}
+
+//console.log(fun2());
+/// Doesnt work :( ^^^^^^
+/* 3 === 3 true
+    3 == "3" true
+    3 == "3" false
+*/
+//------------------------------------------------------------------
+//Objects
+var ourDog = {
+    "name": "Dog",
+    "legs": 4,
+    "tails": 1,
+    "friends":["everything!"]
+};
+
+var testObj = {
+    "an entree": "hamburger",
+    "side dish": "fries"
+};
+
+var entreeVal = testObj["an entree"];
+var sideVal = testObj["side dish"];
+console.log(entreeVal,sideVal);
+testObj.drink = 'water';
+console.log(testObj);
+delete testObj.drink;
+console.log(testObj);
+
+</script>
